@@ -1,0 +1,16 @@
+pg: &pg
+  adapter: postgresql
+  encoding: unicode
+  pool: 40
+
+development:
+  <<: *pg
+  database: whatever_development
+
+test:
+  <<: *pg
+  database: whatever_test
+
+production:
+  <<: *pg
+  database: whatever_production
